@@ -1,14 +1,13 @@
 const express = require("express");
 const cors = require("cors");
-const apiRouter = require('./backend/apiRouter');
-const likesCtrl = require ('./backend/controllers/likes.controller');
+const apiRouter = require('../backend/apiRouter');
+const likesCtrl = require ('../backend/controllers/likes.controller');
 const path = require('path');
 const bodyParser = require('body-parser');
 const listEndpoints = require('express-list-endpoints');
-const likesController = require("./backend/controllers/likes.controller");
 const app = express();
 let corsOptions = {
-  origin: "http://localhost:8080"
+  origin: "http://localhost:3000"
 };
 
 app.use((req, res, next) => {
